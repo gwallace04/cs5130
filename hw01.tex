@@ -72,6 +72,46 @@ Assume that $2^{2n} = O(2^n)$. The there exists constants $c$ and $n_0$ such tha
 \[0 \leq 2^{2n} = 2^n \cdot 2^n \leq c \cdot 2^n\]
 for all $n \geq n_0$. Thus, $c \geq 2^n$, for an arbitrarily large value of $n$,
 a contradiction since $c$ is a constant. Thus, $2^{2n} \not= O(2^n)$. 
-
 \end{proof}
+
+\newpage
+\hwnumber{4}
+
+One way we can compare these functions is by plotting them. We use the Python
+package \texttt{matplotlib} (example code
+\href{https://raw.githubusercontent.com/gwallace04/cs5130/master/plot.py}{here})
+to plot the functions as in \ref{fig:plot}. Since it is easy for the plots to
+become cluttered, we compare two or three functions at a time. 
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{functions.png}
+\caption{Comparing functions}
+\label{fig:plot}
+\end{figure}
+
+Continuing on in this manner, we get the following list ordered fastest growing
+to slowest:
+
+\begin{enumerate}
+\item $2^{2^{n+1}}$
+\item $2^{2^n}$
+\item $(n + 1)!$
+\item $n!$
+\item $e^n$
+\item $n \cdot 2^n$
+\item $2^n$
+\item $n^{\lg \lg n}$
+\item $(\lg n)!$
+\item $4^{\lg n} = n^2$
+\item $\lg(n!) = n \lg n$
+\item $(\sqrt{2})^{\lg n}$
+\item $n$
+\item $\lg^2 n$
+\item $\ln n$
+\item $\sqrt{\lg n}$
+\item $n^{1 / \lg n} = 1$
+\end{enumerate}
+
+
+
 \end{document}
